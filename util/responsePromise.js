@@ -15,7 +15,7 @@ function property (promise, name) {
       return value && value[name]
     },
     function (value) {
-      return Promise.reject(value && value[name])
+      return Promise.reject(value && value[name] || value)
     }
   )
 }
